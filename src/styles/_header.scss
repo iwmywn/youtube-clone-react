@@ -1,0 +1,102 @@
+@import "./utils/boxIcons";
+@import "./utils/flex";
+
+#header {
+  background-color: var(--bg-primary);
+  height: 5.6rem;
+  padding-inline: 1.6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+
+  > * {
+    @include alignCenter;
+  }
+
+  .left {
+    @include alignCenter;
+    width: 25rem;
+
+    &__menu {
+      @include boxIcons;
+      color: var(--bg-secondary);
+    }
+
+    &__logo {
+      @include alignCenter;
+      height: 100%;
+      vertical-align: middle;
+      margin-left: 1.6rem;
+      cursor: pointer;
+    }
+  }
+
+  .middle {
+    @include flexCenter;
+    flex: 1;
+    max-width: 65rem;
+    color: var(--bg-secondary);
+
+    &__search-bar {
+      @include alignCenter;
+      flex: 1;
+      height: 4rem;
+      padding-inline: 1.6rem 4px;
+      border: 1px solid #eee;
+      border-radius: 999rem 0 0 999rem;
+    }
+
+    &__search-input {
+      line-height: 2.4rem;
+      font-size: 1.6rem;
+      outline: none;
+      width: 0;
+      width: 100%;
+      outline: none;
+      border: none;
+      padding: 0;
+    }
+
+    &__search-button {
+      @include boxIcons;
+      margin-right: 1.2rem;
+      width: 6.5rem;
+      border-radius: 0 999rem 999rem 0;
+      background-color: var(--bg-button);
+    }
+
+    &__search-voice {
+      @include boxIcons;
+      background-color: var(--bg-button);
+    }
+  }
+
+  .right {
+    width: 25rem;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    &__create {
+      @include boxIcons;
+    }
+
+    &__notifications {
+      @include boxIcons;
+    }
+
+    &__profile {
+      @include justifyCenter;
+      width: 6rem;
+
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 999rem;
+      }
+    }
+  }
+}
