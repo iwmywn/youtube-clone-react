@@ -8,17 +8,11 @@ interface Props {
   type?: string;
 }
 
-export default function Card({
-  svg,
-  name,
-  active,
-  imageUrl,
-  type = "svg",
-}: Props) {
+export default function Card({ svg, name, active, imageUrl, type }: Props) {
   return (
     <a
       href="#"
-      className="hover:bg-secondary/5 flex h-10 cursor-pointer items-center gap-6 rounded-lg px-3"
+      className="flex h-10 cursor-pointer items-center gap-6 rounded-lg px-3 hover:bg-secondary/5"
       title={name}
     >
       {svg && svg}
