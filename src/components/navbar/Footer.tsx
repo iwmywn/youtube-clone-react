@@ -17,7 +17,7 @@ export default function Footer() {
         <a href="#">How Youtube works</a>
         <a href="#">Test new features</a>
       </div>
-      <div className="text-secondary/50 px-6 py-4 text-xs">
+      <div className="px-6 py-4 text-xs text-secondary/50">
         &copy; 2024 Google LLC
       </div>
     </footer>
