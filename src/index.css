@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,17 +8,15 @@
   :root {
     --color-primary: 255, 255, 255;
     --color-secondary: 0, 0, 0;
+    --color-accent: 120, 120, 120;
   }
   @media (prefers-color-scheme: dark) {
     /* :root {
       --color-primary: 0, 0, 0;
       --color-secondary: 255, 255, 255;
+      --color-accent: 220, 220, 220;
     } */
   }
-}
-
-* {
-  box-sizing: border-box;
 }
 
 a {
@@ -30,5 +28,5 @@ a {
 }
 
 #nav:hover::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--color-secondary), .35);
+  background-color: rgba(var(--color-secondary), 0.35);
 }
