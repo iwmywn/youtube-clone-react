@@ -10,10 +10,10 @@ export default function Middle() {
           placeholder="Search"
         />
       </div>
-      <div className="mr-3 flex h-10 w-16 cursor-pointer items-center justify-center rounded-br-full rounded-tr-full border-y border-r border-secondary/20 bg-secondary/5 hover:bg-secondary/10">
+      <div className="bg-accent/5 hover:bg-accent/10 mr-3 flex h-10 w-16 cursor-pointer items-center justify-center rounded-br-full rounded-tr-full border-y border-r border-secondary/20">
         {search.svg}
       </div>
-      <div className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-secondary/5 hover:bg-secondary/15">
+      <div className="bg-accent/10 hover:bg-accent/20 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full">
         {voice.svg}
       </div>
     </section>
