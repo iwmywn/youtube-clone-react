@@ -1,6 +1,6 @@
-import RenderHeader from "./components/header";
-import RenderNavBar from "./components/navbar";
-import RenderMain from "./components/main";
+import RenderHeader from "./components/header/RenderHeader";
+import RenderNavBar from "./components/navbar/RenderNavBar";
+import RenderMain from "./components/main/RenderMain";
 import "./index.css";
 
 export default function App() {
