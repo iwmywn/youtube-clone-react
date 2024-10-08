@@ -1,15 +1,16 @@
 import { useState } from "react";
 import theme from "../../data/headerData";
-import GridVideos from "./GridVideos";
 
-export default function Header() {
-  const [selectedTheme, setSelectedTheme] = useState<string>("All");
-  const [index, setIndex] = useState(0);
+interface Props {
+  setSelectedTheme: (theme: string) => void;
+}
+
+export default function Header({ setSelectedTheme }: Props) {
+  const [index, setIndex] = useState<number>(0);
 
   const handleClick = (name: string, index: number) => {
     setIndex(index);
     setSelectedTheme(name);
-    console.log(name);
   };
 
   const listItems = theme.map((item, i) => (
@@ -31,8 +32,6 @@ export default function Header() {
       <header className="flex h-14 flex-nowrap items-center gap-x-3 px-6 text-sm">
         {listItems}
       </header>
-
-      <GridVideos theme={selectedTheme} />
     </>
   );
 }

@@ -5,7 +5,7 @@ interface Props {
   theme: string;
 }
 
-export default function GridVideos({ theme = "All" }: Props) {
+export default function GridVideos({ theme }: Props) {
   let videosFilter = [...videos];
 
   if (theme !== "All")
@@ -21,17 +21,21 @@ export default function GridVideos({ theme = "All" }: Props) {
       key={video.id}
       urlId={video.urlId}
       thumbnailSrc={video.thumbnail}
-      avatarSrc={video.profileAvatar}
+      avatarSrc={video.Avatar}
       title={video.title}
       channelName={video.channelName}
       channelId={video.channelId}
+      duration={video.duration}
       views={video.stats.views}
       date={video.stats.postDay}
     />
   ));
 
   return (
-    <div id="content" className="ml-6 mr-4 grid grid-cols-4 gap-x-4 gap-y-10">
+    <div
+      id="content"
+      className="tablet2:grid-cols-2 laptop:grid-cols-3 destop2:grid-cols-4 ml-6 mr-4 grid grid-cols-1 gap-x-4 gap-y-10 pt-6"
+    >
       {videoList}
     </div>
   );

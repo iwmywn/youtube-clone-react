@@ -7,7 +7,7 @@ export default function RenderNavBar() {
   return (
     <nav
       id="nav"
-      className="fixed bottom-0 left-0 top-14 z-10 hidden w-60 overflow-x-hidden overflow-y-scroll bg-primary text-sm"
+      className="destop:block fixed bottom-0 left-0 top-14 z-10 hidden w-60 overflow-x-hidden overflow-y-scroll bg-primary text-sm"
     >
       <section className="border-b border-secondary/20 p-3">
         <Card svg={icons.home.svg} name={icons.home.name} active />
