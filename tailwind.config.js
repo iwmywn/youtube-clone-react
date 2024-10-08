@@ -9,6 +9,7 @@ export default {
       colors: {
         primary: "rgba(var(--color-primary))",
         secondary: "rgba(var(--color-secondary))",
+        accent: "rgba(var(--color-accent))",
       }
     },
   },
