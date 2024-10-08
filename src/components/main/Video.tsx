@@ -7,6 +7,7 @@ interface Props {
   title: string;
   channelName: string;
   channelId: string;
+  duration: string;
   views: string;
   date: string;
 }
@@ -18,21 +19,25 @@ export default function Video({
   title,
   channelName,
   channelId,
+  duration,
   views,
   date,
 }: Props) {
   return (
-    <div className="cursor-pointer">
+    <div className="mx-auto w-full max-w-[500px] cursor-pointer">
       <a
         href={"https://www.youtube.com/watch?v=" + urlId}
         target="_blank"
-        className="block overflow-hidden rounded-lg"
+        className="relative block w-full overflow-hidden rounded-lg"
       >
         <img
           className="w-full object-cover"
           src={thumbnailSrc}
           alt="thumbnail"
         />
+        <div className="pointer-events-none absolute bottom-2 right-2 rounded-[4px] bg-black/65 px-[5px] py-[2px] text-xs font-medium text-white">
+          {duration}
+        </div>
       </a>
       <div className="mt-3 flex w-full">
         <a
@@ -42,7 +47,7 @@ export default function Video({
         >
           <img className="object-cover" src={avatarSrc} alt="profile" />
         </a>
-        <div className="flex flex-col">
+        <div className="flex flex-1 flex-col overflow-hidden">
           <a
             href={"https://www.youtube.com/watch?v=" + urlId}
             target="_blank"
@@ -50,7 +55,7 @@ export default function Video({
           >
             {title}
           </a>
-          <div className="mt-1 text-sm">
+          <div className="mt-1 overflow-hidden text-ellipsis whitespace-nowrap text-sm">
             <a
               href={"https://www.youtube.com/channel/" + channelId}
               className="text-accent"
