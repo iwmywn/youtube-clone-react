@@ -12,7 +12,11 @@ export default function Card({ svg, name, active, imageUrl, type }: Props) {
   return (
     <a
       href="#"
-      className="flex h-10 cursor-pointer items-center gap-6 rounded-lg px-3 hover:bg-secondary/5"
+      className={
+        active
+          ? "hover:bg-accent/25 bg-accent/15 flex h-10 cursor-pointer items-center gap-6 rounded-lg px-3"
+          : "hover:bg-accent/15 flex h-10 cursor-pointer items-center gap-6 rounded-lg px-3"
+      }
       title={name}
     >
       {svg && svg}
