@@ -2,14 +2,14 @@ import Video from "./Video";
 import videos from "../../data/videos";
 
 interface Props {
-  theme?: string;
+  theme: string;
 }
 
 export default function GridVideos({ theme = "All" }: Props) {
   let videosFilter = [...videos];
 
   if (theme !== "All")
-    videosFilter = videosFilter.filter((video) => video.id === 1);
+    videosFilter = videosFilter.filter((video) => video.theme === theme);
 
   for (let i = 0; i < videosFilter.length; i++) {
     const j = Math.floor(Math.random() * i);
