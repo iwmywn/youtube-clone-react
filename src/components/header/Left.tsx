@@ -6,9 +6,9 @@ export default function Left() {
       <div className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-secondary hover:bg-secondary/15">
         {menu.svg}
       </div>
-      <div className="ml-4 flex h-full cursor-pointer items-center">
+      <a href="/" className="ml-4 flex h-full cursor-pointer items-center">
         {logo.svg}
-      </div>
+      </a>
     </section>
   );
 }

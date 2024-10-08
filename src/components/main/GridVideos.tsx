@@ -1,14 +1,30 @@
 import Video from "./Video";
 import videos from "../../data/videos";
 
-export default function GridVideos() {
-  const videoList = videos.map((video) => (
+interface Props {
+  theme?: string;
+}
+
+export default function GridVideos({ theme = "All" }: Props) {
+  let videosFilter = [...videos];
+
+  if (theme !== "All")
+    videosFilter = videosFilter.filter((video) => video.id === 1);
+
+  for (let i = 0; i < videosFilter.length; i++) {
+    const j = Math.floor(Math.random() * i);
+    [videosFilter[i], videosFilter[j]] = [videosFilter[j], videosFilter[i]];
+  }
+
+  const videoList = videosFilter.map((video) => (
     <Video
       key={video.id}
+      urlId={video.urlId}
       thumbnailSrc={video.thumbnail}
       avatarSrc={video.profileAvatar}
       title={video.title}
       channelName={video.channelName}
+      channelId={video.channelId}
       views={video.stats.views}
       date={video.stats.postDay}
     />
