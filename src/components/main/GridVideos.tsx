@@ -31,12 +31,5 @@ export default function GridVideos({ theme }: Props) {
     />
   ));
 
-  return (
-    <div
-      id="content"
-      className="tablet2:grid-cols-2 laptop:grid-cols-3 destop2:grid-cols-4 ml-6 mr-4 grid grid-cols-1 gap-x-4 gap-y-10 pt-6"
-    >
-      {videoList}
-    </div>
-  );
+  return <>{videoList}</>;
 }

@@ -1,13 +1,15 @@
 import LargeNav from "./LargeNav";
 import SmallNav from "./SmallNav";
-import { useState } from "react";
 
-export default function RenderNavBar() {
-  const [active, setActive] = useState<Boolean>(false);
+interface NavProps {
+  isLargeNav: boolean;
+}
+
+export default function RenderNavBar({ isLargeNav }: NavProps) {
   return (
     <>
-      <LargeNav />
-      <SmallNav />
+      <LargeNav isLargeNav={isLargeNav} />
+      <SmallNav isLargeNav={isLargeNav} />
     </>
   );
 }

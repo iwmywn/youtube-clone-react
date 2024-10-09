@@ -17,7 +17,10 @@ export default {
         "tablet3": "790px",
         "laptop": "1100px",
         "destop": "1315px",
-        "destop2": "1600px",
+        "destop2": "1425px",
+        "destop3": "1600px",
+        "destop4": "1750px",
+        "destop5": "1920px",
       }
     },
   },

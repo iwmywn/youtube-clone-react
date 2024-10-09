@@ -1,14 +1,30 @@
 import Header from "./Header";
 import GridVideos from "./GridVideos";
-import { useState } from "react";
+import { useState, memo } from "react";
 
-export default function RenderMain() {
+interface NavProps {
+  isLargeNav: boolean;
+}
+
+const MemoizedHeader = memo(Header);
+const MemoizedGridVideos = memo(GridVideos);
+
+export default function RenderMain({ isLargeNav }: NavProps) {
   const [selectedTheme, setSelectedTheme] = useState<string>("All");
 
   return (
-    <main className="tablet3:ml-[72px] destop:ml-60 mt-14 overflow-x-hidden bg-primary">
-      <Header setSelectedTheme={setSelectedTheme} />
-      <GridVideos theme={selectedTheme} />
-    </main>
+    <>
+      <MemoizedHeader setSelectedTheme={setSelectedTheme} />
+      <div
+        id="content"
+        className={
+          isLargeNav
+            ? "destop5:grid-cols-5 destop3:grid-cols-4 ml-2 mr-4 grid grid-cols-1 gap-x-4 gap-y-10 pl-4 pt-6 tablet2:grid-cols-2 tablet2:pl-0 laptop:grid-cols-3"
+            : "destop4:grid-cols-5 ml-2 mr-4 grid grid-cols-1 gap-x-4 gap-y-10 pl-4 pt-6 tablet2:grid-cols-2 tablet2:pl-0 laptop:grid-cols-3 destop2:grid-cols-4"
+        }
+      >
+        <MemoizedGridVideos theme={selectedTheme} />
+      </div>
+    </>
   );
 }
