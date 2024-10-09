@@ -11,7 +11,7 @@ export default function App() {
   const [isLargeNav, setIsLargeNav] = useState<boolean>(true);
 
   const toggleNav = () => {
-    setIsLargeNav((prev) => !prev);
+    setIsLargeNav(!isLargeNav);
   };
 
   return (
@@ -20,11 +20,7 @@ export default function App() {
       <RenderHeader toggleNav={toggleNav} />
       <RenderNavBar isLargeNav={isLargeNav} />
       <main
-        className={
-          isLargeNav
-            ? "mt-14 overflow-x-hidden bg-primary tablet3:ml-[72px] destop:ml-60"
-            : "mt-14 overflow-x-hidden bg-primary tablet3:ml-[72px]"
-        }
+        className={`mt-14 overflow-x-hidden bg-primary tablet3:ml-[72px] ${isLargeNav && "destop:ml-60"} `}
       >
         <MemoizedRenderMain isLargeNav={isLargeNav} />
       </main>
