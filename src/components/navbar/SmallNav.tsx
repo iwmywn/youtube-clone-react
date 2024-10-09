@@ -10,11 +10,7 @@ export default function SmallNav({ isLargeNav }: NavProps) {
   return (
     <nav
       id="nav"
-      className={
-        isLargeNav
-          ? "fixed bottom-0 left-0 top-14 z-10 hidden w-[72px] bg-primary px-1 py-[5px] tablet3:block destop:hidden"
-          : "fixed bottom-0 left-0 top-14 z-10 hidden w-[72px] bg-primary px-1 py-[5px] tablet3:block"
-      }
+      className={`fixed bottom-0 left-0 top-14 z-10 hidden w-[72px] bg-primary px-1 py-[5px] tablet3:block ${isLargeNav && "destop:hidden"} `}
     >
       {nav.map((item, index) => (
         <div

@@ -8,11 +8,7 @@ interface Props {
 export default function Title({ svg, name }: Props) {
   return (
     <div
-      className={
-        svg
-          ? "flex h-10 cursor-pointer items-center gap-2 rounded-lg px-3 font-medium hover:bg-secondary/5"
-          : "flex h-10 items-center gap-2 px-3 font-medium"
-      }
+      className={`flex h-10 items-center gap-2 px-3 font-medium ${svg && "cursor-pointer rounded-lg hover:bg-accent/15"} `}
       title={name}
     >
       <span className="text-base">{name}</span>
