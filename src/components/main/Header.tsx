@@ -17,8 +17,8 @@ export default function Header({ setSelectedTheme }: Props) {
     <div
       className={
         i === index
-          ? "flex h-8 cursor-pointer items-center whitespace-nowrap rounded-lg bg-black px-3 font-medium text-white"
-          : "flex h-8 cursor-pointer items-center whitespace-nowrap rounded-lg bg-black/5 px-3 font-medium"
+          ? "flex h-8 cursor-pointer items-center whitespace-nowrap rounded-lg bg-secondary px-3 font-medium text-primary"
+          : "flex h-8 cursor-pointer items-center whitespace-nowrap rounded-lg bg-secondary/5 px-3 font-medium"
       }
       key={item.id}
       onClick={() => handleClick(item.name, i)}
