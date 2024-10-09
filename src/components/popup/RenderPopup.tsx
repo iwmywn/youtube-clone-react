@@ -3,7 +3,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { GoArrowDown } from "react-icons/go";
 
-export default function Popup() {
+export default function RenderPopup() {
   const [display, setDisplay] = useState<boolean>(true);
   return (
     display && (
