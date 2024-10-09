@@ -28,10 +28,10 @@ export default function Video({
       <a
         href={"https://www.youtube.com/watch?v=" + urlId}
         target="_blank"
-        className="relative block w-full overflow-hidden rounded-lg"
+        className="relative block w-full overflow-hidden"
       >
         <img
-          className="w-full object-cover"
+          className="w-full rounded-xl object-cover"
           src={thumbnailSrc}
           alt="thumbnail"
         />
