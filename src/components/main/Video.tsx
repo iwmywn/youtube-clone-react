@@ -32,7 +32,7 @@ export default function Video({
       >
         <img
           className="w-full rounded-xl object-cover"
-          src={thumbnailSrc}
+          src={"https://i.ytimg.com/vi/" + thumbnailSrc}
           alt="thumbnail"
         />
         <div className="pointer-events-none absolute bottom-2 right-2 rounded-[4px] bg-black/65 px-[5px] py-[2px] text-xs font-medium text-white">
@@ -45,7 +45,11 @@ export default function Video({
           target="_blank"
           className="mr-3 h-9 w-9 flex-shrink-0 overflow-hidden rounded-full"
         >
-          <img className="object-cover" src={avatarSrc} alt="profile" />
+          <img
+            className="object-cover"
+            src={"https://yt3.ggpht.com/" + avatarSrc}
+            alt="profile"
+          />
         </a>
         <div className="flex flex-1 flex-col overflow-hidden">
           <a
