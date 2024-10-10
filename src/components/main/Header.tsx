@@ -15,7 +15,7 @@ export default function Header({ setSelectedTheme }: Props) {
 
   const listItems = theme.map((item, i) => (
     <div
-      className={`flex h-8 cursor-pointer items-center whitespace-nowrap rounded-lg px-3 font-medium ${i === index ? "bg-secondary text-primary" : "bg-secondary/5"} `}
+      className={`flex h-8 cursor-pointer items-center whitespace-nowrap rounded-lg px-3 font-medium ${i === index ? "bg-secondary text-primary" : "bg-secondary/5 transition-all duration-300 hover:bg-secondary/10 dark:bg-secondary/15 dark:hover:bg-secondary/25"} `}
       key={item.id}
       onClick={() => handleClick(item.name, i)}
     >
