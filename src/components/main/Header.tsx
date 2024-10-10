@@ -25,7 +25,7 @@ export default function Header({ setSelectedTheme }: Props) {
 
   return (
     <>
-      <header className="flex h-14 flex-nowrap items-center gap-x-3 px-6 text-sm">
+      <header className="fixed top-14 z-10 flex h-14 w-full flex-nowrap items-center gap-x-3 bg-primary px-6 text-sm">
         {listItems}
       </header>
     </>

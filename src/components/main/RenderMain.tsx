@@ -17,7 +17,7 @@ export default function RenderMain({ isLargeNav }: NavProps) {
       <MemoizedHeader setSelectedTheme={setSelectedTheme} />
       <div
         id="content"
-        className={`ml-2 mr-4 grid grid-cols-1 gap-x-4 gap-y-10 pl-4 pt-6 tablet2:grid-cols-2 tablet2:pl-0 laptop:grid-cols-3 ${isLargeNav ? "destop3:grid-cols-4 destop5:grid-cols-5" : "destop2:grid-cols-4 destop4:grid-cols-5"} `}
+        className={`ml-2 mr-4 mt-14 grid grid-cols-1 gap-x-4 gap-y-10 pl-4 pt-6 tablet2:grid-cols-2 tablet2:pl-0 laptop:grid-cols-3 ${isLargeNav ? "destop3:grid-cols-4 destop5:grid-cols-5" : "destop2:grid-cols-4 destop4:grid-cols-5"} `}
       >
         <MemoizedGridVideos theme={selectedTheme} />
       </div>
