@@ -8,7 +8,7 @@ export default function Left({ toggleNav }: NavProps) {
   return (
     <section className="flex w-auto items-center tablet:w-60">
       <div
-        className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-secondary hover:bg-secondary/15"
+        className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-secondary hover:bg-secondary/10 dark:hover:bg-secondary/15"
         onClick={toggleNav}
       >
         {menu.svg}
